@@ -37,7 +37,7 @@ score display screen
 <h2 align="center"> 
   <?php echo $no = $_SESSION['score']; 
         
-    ?>/5 </h2>
+    ?>/10 </h2>
 <br>
 <h1>The score is <?php echo $no*5; ?>
 </h1>

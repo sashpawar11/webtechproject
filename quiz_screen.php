@@ -11,7 +11,7 @@
         $_SESSION['current_id'] = 1; 
     } 
     else { 
-        if($_SESSION['current_id']<=5) 
+        if($_SESSION['current_id']<=10) 
         { 
                 if(isset($_POST['submit'])) {
                     
@@ -22,7 +22,7 @@
                      
             }
         }
-        while($_SESSION['current_id']>5)  
+        while($_SESSION['current_id']>10)  
         {
            $_SESSION['current_id']=1;
              
@@ -37,7 +37,7 @@
 ?>
 
 <head>
-<title>Quiz screen</title>
+<title>Trivia Screen</title>
 <link rel="stylesheet" href="quizscreen_style.css"></link>
 </head>
 
@@ -45,7 +45,7 @@
 <main>
  <div class="main_div">
 <div class="quiz_header">
-<h1 id="question-number"> Question : <?php echo $_SESSION['current_id']; ?> /5</h1>
+<h1 id="question-number"> Question : <?php echo $_SESSION['current_id']; ?> /10</h1>
 </div>
 <div class="questions">
 <h1>
