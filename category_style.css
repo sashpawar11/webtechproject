@@ -3,10 +3,13 @@ body {
       align-items: center;
       justify-content: center;
       margin: 0 auto;
-      height: 100vh;
-      background-color: #011936FF;
+      background-image: url("img/bg2.jpg");
+  
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
-
 #header{
     font-size: 40px;
 }
@@ -14,8 +17,8 @@ body {
 .square {
       border-radius: 25px;
       background-color: #F9DC5CFF;
-      width: 1000px;
-      height: 700px;
+      width: 900px;
+      height: 600px;
       text-align:center;
     }
 
@@ -43,8 +46,8 @@ h1{
   display: inline-block;
   text-decoration: none;
   cursor: pointer;
-  height: 250px;
-  width: 350px;
+  height: 200px;
+  width: 250px;
   border-radius: 25px;
 }
 .category_btn:hover {
@@ -69,8 +72,8 @@ h1{
 
 #back_btn_div{
   position: absolute;
-  top: 58px;
-  right: 320;
+  top: 38px;
+  right: 220;
   width: 200px;
   height: 100px;
 }

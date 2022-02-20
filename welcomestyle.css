@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html,body{
+    height: 100%;
+ 
+    /* background: #83a4d4; 
+    background: -webkit-linear-gradient(to right, #b6fbff, #83a4d4);  
+    background: linear-gradient(to right, #b6fbff, #83a4d4); */
+   
+    
+    background-color: #0000;
+    margin: auto;
+    overflow:auto;
+
+}
+.bg {
+ 
+    background-image: url("img/bg2.jpg");
+
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+::selection{
+    color: #fff;
+    background: #3D56B2;
+}
+
+::-webkit-scrollbar{
+    width: 3px;
+    border-radius: 25px;
+}
+::-webkit-scrollbar-track{
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb{
+    background: #aebdf5;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #ccc;
+}
+
+.hero-banner {
+    position: fixed;
+    left: 50%;
+    top: 46%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-banner h1 {
+    font-size: 48px;
+}
+.hero-banner .btn {
+    position: relative;
+    overflow: hidden;
+    z-index: 9;
+    margin: 10px;
+    color:white;
+}
+.hero-banner .btn-primary {
+    color:black;
+    background-color: yellow;
+    border-color: yellow;
+}
+.hero-banner .btn:before {
+    content: "";
+    
+    background: yellow;
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -ms-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+}
+.hero-banner .btn:hover:before {
+  
+    width: 100%;
+}
+.hero-banner .btn:hover {
+  color:black;
+}

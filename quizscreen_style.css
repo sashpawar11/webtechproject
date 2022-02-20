@@ -8,10 +8,8 @@ html, body{
     height: 100%;
 }
 
-
 body{
     font-family: 'Montserrat', serif;
-
 }
 
 main{
@@ -29,7 +27,7 @@ main{
 
 .main_div{
     width: 800px;
-    height: 700px;
+    height: 600px;
     background-color: rgb(249, 246, 92);
     display: flex;
     flex-direction: column;
@@ -46,9 +44,6 @@ main{
     align-items: center;
 }
 
-.game-details-container h1{
-    font-size: 1.2rem;
-}
 
 .questions{
     width: 80%;
@@ -67,62 +62,82 @@ main{
     padding: 3px;
 }
 
-.options{
-    width: 80%;
-    height: 12rem;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
+.radio-toolbar {
+    margin: 10px;
+  }
 
-}
-
-.options span{
-    width: 45%;
-    height: 3rem;
-    border: 2px solid rgb(27, 27, 27);
-    border-radius: 20px;
-    overflow: hidden;
-    background-color: white;
-}
-span label{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  
+  .radio-toolbar input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+  }
+  
+  .radio-toolbar label {
+      display: inline-block;
+      width: 500px;
+      background-color: white;
+      padding: 10px 20px;
+      font-family: sans-serif, Arial;
+      font-size: 16px;
+      border: 2px solid rgb(36, 34, 34);
+      border-radius: 15px;
+      text-align: center;
+      vertical-align: middle;
+  }
+  
+  .radio-toolbar label:hover {
+    background-color: rgb(145, 221, 245);
     cursor: pointer;
-    transition: transform 0.3s;
-    font-weight: 600;
-    color: rgb(22, 22, 22);
-}
-
-span label:hover{
-    -ms-transform: scale(1.12);
-    -webkit-transform: scale(1.12);
-    transform: scale(1.12);
-    color: white;
-}
-
-input[type="radio"] {
-    position: relative;
-    display: none;
-}
-
-
-input[type=radio]:checked ~ .option {
-    background: rgb(35, 105, 236);
-    border-radius: 20px;
-}
+  }
+  
+  .radio-toolbar input[type="radio"]:focus + label {
+      border: 2px dashed #444;
+  }
+  
+  .radio-toolbar input[type="radio"]:checked + label {
+      background-color: rgb(130, 201, 223);
+      border-color: rgb(26, 109, 204);
+  }
 
 .exit_btn{
-    width: 50%;
+    cursor: pointer;
+    width: 8rem;
     height: 3rem;
     display: flex;
     justify-content: center;
+    position: absolute;
+    bottom: 20px;
+    left: 500;
    
 }
 .exit_btn button{
+    cursor: pointer;
+    width: 8rem;
+    height: 3rem;
+    border-radius: 10px;
+    background: rgb(252, 145, 6);
+    color: rgb(25, 25, 25);
+    font-weight: 600;
+    border:none;
+    outline: none;
+    font-size: 20px;
+}
+.exit_btn button:hover{
+    background-color: rgb(224, 128, 17);
+}
+.next_btn{
+    width: 8rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+    right: 500;
+  }
+
+input[type=submit]{
+    cursor: pointer;
     width: 8rem;
     height: 3rem;
     border-radius: 10px;
@@ -133,81 +148,8 @@ input[type=radio]:checked ~ .option {
     cursor: pointer;
     outline: none;
     font-size: 20px;
-}
-.exit_btn button:hover{
+  }
+
+input[type=submit]:hover {
     background-color: rgb(224, 128, 17);
-}
-
-.modal-container{
-    display: none;
-    position: fixed;
-    z-index: 1; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); 
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; 
-    -webkit-animation: fadeIn 1.2s ease-in-out;
-    animation: fadeIn 1.2s ease-in-out;
-}
-
-.modal-content-container{
-    height: 20rem;
-    width: 25rem;
-    background-color: rgb(43, 42, 42);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    border-radius: 25px;
-}
-
-.modal-content-container h1{
-    font-size: 1.3rem;
-    height: 3rem;
-    color: lightgray;
-    text-align: center;
-}
-
-.grade-details{
-    width: 15rem;
-    height: 10rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.grade-details p{
-    color: white;
-    text-align: center;
-}
-
-.modal-button-container{
-    height: 2rem;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.modal-button-container button{
-    width: 10rem;
-    height: 2rem;
-    background: none;
-    outline: none;
-    border: 1px solid rgb(252, 242, 241);
-    color: white;
-    font-size: 1.1rem;
-    cursor: pointer;
-    border-radius: 20px;
-}
-.modal-button-container button:hover{
-    background-color: rgb(83, 82, 82);
-}
-
+  }
