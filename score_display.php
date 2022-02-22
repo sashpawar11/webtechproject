@@ -23,10 +23,18 @@ score display screen
   $categoryid=$_SESSION['catg'];
   $quesno=$_SESSION['score'];
   $score=$quesno*5;
-  $fetchqry5 = "INSERT INTO `scores` (`user_id`,`username`,`category_id`,`score`) VALUES ('$userid','$username','$categoryid','$score');";
-  $result5 = mysqli_query($con,$fetchqry5);
-  $fetchqry6 = "UPDATE `scores` SET `username`='$username',`category_id`='$categoryid',`score`='$score' WHERE `user_id`='$userid';";
-  $result6 = mysqli_query($con,$fetchqry6);
+  $checkqry = "SELECT * FROM `scores` WHERE `user_id` = '$userid' AND `category_id`='$categoryid';";
+  $resultchk = mysqli_query($con,$checkqry);
+  if(mysqli_num_rows($resultchk) > 0){
+    $fetchqry6 = "UPDATE `scores` SET `username`='$username',`category_id`='$categoryid',`score`='$score' WHERE `user_id`='$userid' AND `category_id`='$categoryid'";
+    $result6 = mysqli_query($con,$fetchqry6);
+  }
+  else {
+    $fetchqry5 = "INSERT INTO `scores` (`user_id`,`username`,`category_id`,`score`) VALUES ('$userid','$username','$categoryid','$score');";
+    $result5 = mysqli_query($con,$fetchqry5);
+  }
+
+
 ?>
 
 <body>
@@ -63,7 +71,8 @@ echo "</table>";
 //session_unset(); 
 ?>
 <div id="home_btn_div">
-<a href="category.php"><button type="button" id="home">Goto Category Select</button></a> 
+<a href="category.php"><button type="button" id="home">Category Select</button></a> 
+<a href="dashboard.php"><button type="button" id="home">Dashboard</button></a> 
 </div>
 </div>
 

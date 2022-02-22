@@ -79,7 +79,7 @@
             </div>
 		</div>
         <button class="startbtn" type="button" onclick="window.location.href='category.php'">Start Trivia!</button>   
-        <button class="exitbtn" type="button" onclick="window.location.href='index.html'">Exit</button>   
+        <button class="exitbtn" type="button" onclick="window.location.href='logout.php'">Logout</button>   
 	</section>
    
 

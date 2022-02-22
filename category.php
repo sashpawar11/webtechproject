@@ -12,7 +12,7 @@ category screen
         Select the Quiz Category:
 </h1>
 <div id="back_btn_div">
-<a href=logout.php><button id="back1">Back</button></a> <!--change href-->
+<a href="dashboard.php"><button id="back1">Back</button></a> 
 </div>
 <br><br>
 <div id="btn_div">
