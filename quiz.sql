@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 20, 2022 at 01:55 PM
+-- Generation Time: Feb 22, 2022 at 08:40 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.0
 
@@ -106,21 +106,21 @@ CREATE TABLE `question_solution` (
 --
 
 INSERT INTO `question_solution` (`ques_id`, `category_id`, `user_ans`, `correct_option`) VALUES
-(1, 1, 'Earth and Mars', 'Mars and Jupiter'),
-(2, 1, 'Venus', 'Uranus'),
+(1, 1, 'Mars and Jupiter', 'Mars and Jupiter'),
+(2, 1, 'Uranus', 'Uranus'),
 (3, 1, 'A storm', 'A storm'),
-(4, 1, 'Rusty metal', 'Dirty ice and Dust'),
-(5, 1, 'Earth', 'Mercury'),
-(1, 2, '', 'Paris'),
+(4, 1, '', 'Dirty ice and Dust'),
+(5, 1, '', 'Mercury'),
+(1, 2, 'Paris', 'Paris'),
 (2, 2, '', 'Vatican City'),
 (3, 2, '', 'Pacific'),
 (4, 2, '', 'United States'),
 (5, 2, '', 'Seven'),
-(1, 3, 'Command posts', 'Tombs'),
-(2, 3, '1920', '1918'),
-(3, 3, 'V.V. Giri', 'V.V. Giri'),
-(4, 3, '10', '8'),
-(5, 3, 'Shah Jahan', 'Shah Jahan'),
+(1, 3, 'Tombs', 'Tombs'),
+(2, 3, '', '1918'),
+(3, 3, '', 'V.V. Giri'),
+(4, 3, '', '8'),
+(5, 3, '', 'Shah Jahan'),
 (1, 4, NULL, 'Brazil'),
 (2, 4, NULL, '24'),
 (3, 4, NULL, 'Bill Gates'),
@@ -146,9 +146,9 @@ CREATE TABLE `scores` (
 --
 
 INSERT INTO `scores` (`user_id`, `username`, `category_id`, `score`) VALUES
-(1, 'sash', '1', 25),
-(1, 'sash', '2', 10),
-(1, 'sash', '3', 10);
+(3, 's', '1', 15),
+(3, 's', '2', 5),
+(3, 's', '3', 5);
 
 -- --------------------------------------------------------
 
@@ -170,7 +170,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`user_id`, `username`, `email`, `password`) VALUES
 (1, 'sash', 'test@gmail.com', '123'),
-(2, 'test123', 'test123@t.c', '123');
+(2, 'test123', 'test123@t.c', '123'),
+(3, 's', 's@s.com', 's');
 
 --
 -- Indexes for dumped tables
@@ -186,7 +187,7 @@ ALTER TABLE `question_solution`
 -- Indexes for table `scores`
 --
 ALTER TABLE `scores`
-  ADD PRIMARY KEY (`user_id`,`category_id`);
+  ADD KEY `user_id` (`user_id`);
 
 --
 -- Indexes for table `users`
@@ -202,7 +203,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
