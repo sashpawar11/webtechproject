@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 22, 2022 at 08:40 AM
+-- Generation Time: Feb 22, 2022 at 09:25 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.0
 
@@ -109,23 +109,43 @@ INSERT INTO `question_solution` (`ques_id`, `category_id`, `user_ans`, `correct_
 (1, 1, 'Mars and Jupiter', 'Mars and Jupiter'),
 (2, 1, 'Uranus', 'Uranus'),
 (3, 1, 'A storm', 'A storm'),
-(4, 1, '', 'Dirty ice and Dust'),
-(5, 1, '', 'Mercury'),
+(4, 1, 'Dirty ice and Dust', 'Dirty ice and Dust'),
+(5, 1, 'Venus', 'Mercury'),
+(6, 1, 'Earth', 'Mercury'),
+(7, 1, '', 'Orbit And Spin'),
+(8, 1, '', '1957'),
+(9, 1, '', 'The Photosphere'),
+(10, 1, '', 'A massive collapsing star'),
 (1, 2, 'Paris', 'Paris'),
 (2, 2, '', 'Vatican City'),
 (3, 2, '', 'Pacific'),
 (4, 2, '', 'United States'),
 (5, 2, '', 'Seven'),
+(6, 2, NULL, '14'),
+(7, 2, NULL, ' Mont Blanc Tunnel'),
+(8, 2, NULL, 'River Nile'),
+(9, 2, NULL, 'Canada'),
+(10, 2, NULL, 'Mount Everest'),
 (1, 3, 'Tombs', 'Tombs'),
 (2, 3, '', '1918'),
 (3, 3, '', 'V.V. Giri'),
 (4, 3, '', '8'),
 (5, 3, '', 'Shah Jahan'),
+(6, 3, NULL, 'Portuguese'),
+(7, 3, NULL, 'Traders'),
+(8, 3, NULL, 'Sanskrit'),
+(9, 3, NULL, 'Austria'),
+(10, 3, NULL, '1757 '),
 (1, 4, NULL, 'Brazil'),
 (2, 4, NULL, '24'),
 (3, 4, NULL, 'Bill Gates'),
 (4, 4, NULL, '7'),
-(5, 4, NULL, 'the ‘80s');
+(5, 4, NULL, 'the ‘80s'),
+(6, 4, NULL, '1957'),
+(7, 4, NULL, 'England'),
+(8, 4, NULL, 'Elon Musk'),
+(9, 4, NULL, 'Sardar Vallabhbhai Patel'),
+(10, 4, NULL, 'France ');
 
 -- --------------------------------------------------------
 
@@ -146,7 +166,7 @@ CREATE TABLE `scores` (
 --
 
 INSERT INTO `scores` (`user_id`, `username`, `category_id`, `score`) VALUES
-(3, 's', '1', 15),
+(3, 's', '1', 20),
 (3, 's', '2', 5),
 (3, 's', '3', 5);
 

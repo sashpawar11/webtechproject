@@ -56,17 +56,17 @@ echo "<table border='1px solid black'>
 <td><b>Correct Answer</b></td>
 <td><b>Your Answer</b></td>
 </tr>";
-$fetchqry4 = "SELECT `ques_id`,`user_ans`, `correct_option` FROM `question_solution` WHERE(category_id =".$_SESSION['catg']."); "; //this
+$fetchqry4 = "SELECT `ques_id`,`user_ans`, `correct_option` FROM `question_solution` WHERE(category_id =".$_SESSION['catg']."); "; 
              $result4 = mysqli_query($con,$fetchqry4);
              $storeArray = Array();
              while ($row4 = mysqli_fetch_array($result4, MYSQLI_ASSOC)) {
 
-echo "<tr>";
-echo "<td>" . $row4['ques_id'] . "</td>";
-echo "<td>" . $row4['correct_option'] . "</td>";
-echo "<td>" . $row4['user_ans'] . "</td>";
-echo "</tr>";
-}
+                  echo "<tr>";
+                  echo "<td>" . $row4['ques_id'] . "</td>";
+                  echo "<td>" . $row4['correct_option'] . "</td>";
+                  echo "<td>" . $row4['user_ans'] . "</td>";
+                  echo "</tr>";
+            }
 echo "</table>";
 //session_unset(); 
 ?>

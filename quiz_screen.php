@@ -16,7 +16,7 @@
                 if(isset($_POST['submit'])) {
                     
                      @$userselected = $_POST['radioOption'];
-                     $fetchqry4 = "UPDATE `question_solution` SET `user_ans`='$userselected' WHERE ques_id =".$_SESSION['current_id']." AND category_id=".$_SESSION['catg'].";"; //this
+                     $fetchqry4 = "UPDATE `question_solution` SET `user_ans`='$userselected' WHERE ques_id =".$_SESSION['current_id']." AND category_id=".$_SESSION['catg'].";"; 
                      $result4 = mysqli_query($con,$fetchqry4);
                      $_SESSION['current_id'] ++;
                      
