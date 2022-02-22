@@ -1,6 +1,9 @@
 <?php
     session_start();
+    if(isset($_SESSION['username']))
+    {
     $username = $_SESSION['username'];
+    }
     // $email = ($_POST['email']);
     // $passwd =($_POST['passwd']);
     include_once 'connect.php';

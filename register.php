@@ -13,7 +13,7 @@ if(isset($_POST['submit'])) {
         $fetchqry4 = "INSERT INTO `users` (`username`,`email`,`password`) VALUES('$username','$email','$passwd')";
         $result4 = mysqli_query($con,$fetchqry4);
  
-        header("Location: category.php");
+        header("Location: login.php");
         exit();
     }
 }
